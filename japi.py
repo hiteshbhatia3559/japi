@@ -18,14 +18,15 @@ def getStockdata(symbol):
 
 
 def main():
-    f = open('japi.out','w')
+    f = open('japi.out', 'w')
     while 1:
         user_input = input("Type the name of the symbol to get the last 1min price or quit to exit\n").upper()
         if user_input != "QUIT":
-            response = 'The current price of {} is {}\n'.format(user_input,getStockdata(user_input))
+            response = 'The current price of {} is {}\n'.format(user_input, getStockdata(user_input))
             print(response)
             f.write(response)
         else:
             raise SystemExit
+
 
 main()
